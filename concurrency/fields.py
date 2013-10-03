@@ -64,7 +64,6 @@ class VersionField(Field):
         setattr(cls, 'RevisionMetaInfo', RevisionMetaInfo())
         #TODO: allow user customization of RevisionMetaInfo
         cls._revisionmetainfo = cls.RevisionMetaInfo
-        _wrap_model_save(cls)
         cls.RevisionMetaInfo.field = self
         cls.RevisionMetaInfo.manually = self.manually
 
